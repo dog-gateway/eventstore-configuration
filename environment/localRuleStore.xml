@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dogrules:ruleList xsi:schemaLocation="http://elite.polito.it/domotics/dog/rules/rule_definition rule_definition.xsd " xmlns:dogrules="http://elite.polito.it/domotics/dog/rules/rule_definition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dogrules:rule name="buttonToPlug">
+        <dogrules:if>
+            <dogrules:event>
+                <dogrules:notification name="stateChanged" class="StateChangeNotification" fromDevice="MainsPowerOutlet_1">
+                    <dogrules:param name="newState" value="on" type="OnOffState"/>
+                </dogrules:notification>
+            </dogrules:event>
+            <dogrules:when>
+                <dogrules:state name="off" class="OnOffState" ofDevice="MainsPowerOutlet_3"/>
+            </dogrules:when>
+        </dogrules:if>
+        <dogrules:then>
+            <dogrules:action>
+                <dogrules:command name="on" class="OnOffFunctionality" toDevice="MainsPowerOutlet_2"/>
+            </dogrules:action>
+        </dogrules:then>
+    </dogrules:rule>
+</dogrules:ruleList>
