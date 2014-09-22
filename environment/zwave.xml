@@ -16,7 +16,7 @@
             <dhc:description>The ZWave X gateway
 			</dhc:description>
             <dhc:isIn>LAB6</dhc:isIn>
-            <dhc:param name="NodeID" value="1" type="network"/>
+            <dhc:param name="nodeId" value="1" type="network"/>
             <dhc:controlFunctionality class="AssociateFunctionality">
                 <dhc:commands>
                     <dhc:command class="AssociateCommand" name="AssociateCommand_zwave-gateway" id="AssociateCommand_zwave-gateway">
@@ -41,8 +41,8 @@
         <dhc:device class="TemperatureAndHumiditySensor" id="TemperatureAndHumiditySensor_2" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type TemperatureAndHumiditySensor</dhc:description>
             <dhc:isIn>LAB6</dhc:isIn>
-            <dhc:param name="NodeID" value="2" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="2" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
                 <dhc:commands>
                     <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_TemperatureAndHumiditySensor_2" id="GetTemperatureCommand_TemperatureAndHumiditySensor_2">
@@ -64,7 +64,7 @@
                     <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_TemperatureAndHumiditySensor_2">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newTemperatureValue"/>
-                        <dhc:param name="unitOfMeasure" value="C"/>
+                        <dhc:param name="measuredIn" value="C"/>
                         <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -74,7 +74,7 @@
                     <dhc:notification class="HumidityMeasurementNotification" id="HumidityMeasurementNotification_TemperatureAndHumiditySensor_2">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="changedRelativeHumidity"/>
-                        <dhc:param name="unitOfMeasure" value="%"/>
+                        <dhc:param name="measuredIn" value="%"/>
                         <dhc:param name="notificationParamName" value="relativeHumidity" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -93,8 +93,8 @@
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_3" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type MeteringPowerOutlet</dhc:description>
             <dhc:isIn>LAB6</dhc:isIn>
-            <dhc:param name="NodeID" value="3" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="3" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_3" id="OffCommand_MeteringPowerOutlet_3">
@@ -136,7 +136,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification" id="SinglePhaseActivePowerMeasurementNotification_MeteringPowerOutlet_3">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -146,7 +146,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification" id="SinglePhaseActiveEnergyMeasurementNotification_MeteringPowerOutlet_3">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -171,8 +171,8 @@
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_4" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type MeteringPowerOutlet</dhc:description>
             <dhc:isIn>LAB6</dhc:isIn>
-            <dhc:param name="NodeID" value="4" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="4" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_4" id="OffCommand_MeteringPowerOutlet_4">
@@ -214,7 +214,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification" id="SinglePhaseActivePowerMeasurementNotification_MeteringPowerOutlet_4">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -224,7 +224,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification" id="SinglePhaseActiveEnergyMeasurementNotification_MeteringPowerOutlet_4">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -249,8 +249,8 @@
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_5" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type MeteringPowerOutlet</dhc:description>
             <dhc:isIn>LAB6</dhc:isIn>
-            <dhc:param name="NodeID" value="5" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="5" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_5" id="OffCommand_MeteringPowerOutlet_5">
@@ -292,7 +292,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification" id="SinglePhaseActivePowerMeasurementNotification_MeteringPowerOutlet_5">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -302,7 +302,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification" id="SinglePhaseActiveEnergyMeasurementNotification_MeteringPowerOutlet_5">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -327,8 +327,8 @@
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_7" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type MeteringPowerOutlet</dhc:description>
             <dhc:isIn>LAB6</dhc:isIn>
-            <dhc:param name="NodeID" value="7" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="7" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_7" id="OffCommand_MeteringPowerOutlet_7">
@@ -370,7 +370,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification" id="SinglePhaseActivePowerMeasurementNotification_MeteringPowerOutlet_7">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -380,7 +380,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification" id="SinglePhaseActiveEnergyMeasurementNotification_MeteringPowerOutlet_7">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
